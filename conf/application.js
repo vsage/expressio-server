@@ -3,6 +3,8 @@
 ** See https://terrajs.org/mono/configuration
 */
 
+require('dotenv').config();
+
 module.exports = {
 	mono: {
 		// See https://terrajs.org/mono/configuration/modules

@@ -1,17 +1,10 @@
 module.exports = {
 	mono: {
-		// jwt: {
-		// 	secret: "salutcestcool"
-		// },
-		// http: {
-		// 	logLevel: 'combined'
-		// },
-		// log: {
-		// 	level: 'verbose'
-		// },
 		mongodb: {
-			url: 'mongodb://xxxxx:xxxxxx@ds225382.mlab.com:25382/expressio',
-			dbName: 'expressio'
+			url: 'mongodb://'+process.env.DB_USER+':'+process.env.DB_PASSWORD+'@'+process.env.DB_HOST+'/'+process.env.DB_NAME,
+			dbName: process.env.DB_NAME,
+			findLimitDefault: 500,
+			findLimitMax: 500
 		}
 	}
 }
